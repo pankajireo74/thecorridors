@@ -377,16 +377,6 @@
                         <img src="images/gallery/45.jpg" alt="" class="w-100 h-100">
                     </a>
                 </div>
-                <div class="col-md-3 p-10">
-                    <a href="images/gallery/46.jpg" data-fancybox="gallery">
-                        <img src="images/gallery/46.jpg" alt="" class="w-100 h-100">
-                    </a>
-                </div>
-                <div class="col-md-3 p-10">
-                    <a href="images/gallery/47.jpg" data-fancybox="gallery">
-                        <img src="images/gallery/47.jpg" alt="" class="w-100 h-100">
-                    </a>
-                </div>
 
                 <!-- corridor end -->
 

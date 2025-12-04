@@ -1,3 +1,7 @@
+<?php
+// Ensure configuration (including reCAPTCHA keys) is available.
+require_once __DIR__ . '/../config.php';
+?>
 <div id="pageloader">
     <img src="images/loading.gif" alt="processing..." />
 </div>
@@ -34,6 +38,10 @@
 
                             </div>
                         </div>
+                        <!-- reCAPTCHA v3 token + basic bot-detection helpers (hidden, no UI change) -->
+                        <input type="hidden" name="recaptcha_token" id="recaptcha_token_contact">
+                        <input type="text" name="hp_field" id="hp_field_contact" style="display:none !important;">
+                        <input type="hidden" name="ts" id="ts_contact" value="<?php echo time(); ?>">
                         <button type="submit" class="submit-btn">Submit</button>
                     </form>
                     <div class="additional-info">
@@ -54,7 +62,7 @@
                                 <p class="text-white mb-0">
                                     Telephone:
                                 </p>
-                                <a href="tel:+91-0124-4754060" target="_blank" class="text-white">+9101244754060
+                                <a href="tel:+91-91124-4754060" target="_blank" class="text-white">+91-911244754060
                                 </a>
                             </div>
 
@@ -117,6 +125,10 @@
                 <p>Please Enter Your Details To Get More Details</p>
                 <form id="enquiry-form2" action="thank-you.php" name="enquiry-form2" method="POST"
                     novalidate="novalidate" onsubmit="return form_validate('enquiry-form2');">
+                    <!-- reCAPTCHA v3 token + basic bot-detection helpers (hidden, no UI change) -->
+                    <input type="hidden" name="recaptcha_token" id="recaptcha_token_enquiry">
+                    <input type="text" name="hp_field" id="hp_field_enquiry" style="display:none !important;">
+                    <input type="hidden" name="ts" id="ts_enquiry" value="<?php echo time(); ?>">
                     <div class="row mr0">
                         <div class="form-group col-md-12">
                             <div class="input-group">
@@ -206,7 +218,7 @@
     </div>
 </div>
 
-<a href="tel:+919560554517">
+<a href="tel:+917027927607">
     <img src="images/phone.png" alt="WhatsApp" width="52" height="52" class="whatsicon">
 </a>
 
@@ -229,3 +241,11 @@
 <script src="js/custom2.js"></script>
 
 <!-- <script src="js/swiper-bundle.min.js"></script> -->
+
+<?php if (!empty(RECAPTCHA_SITE_KEY)) : ?>
+<!-- Google reCAPTCHA v3 (Invisible) -->
+<script>
+    window.RECAPTCHA_SITE_KEY = '<?php echo htmlspecialchars(RECAPTCHA_SITE_KEY, ENT_QUOTES, 'UTF-8'); ?>';
+</script>
+<script src="https://www.google.com/recaptcha/api.js?render=<?php echo urlencode(RECAPTCHA_SITE_KEY); ?>"></script>
+<?php endif; ?>

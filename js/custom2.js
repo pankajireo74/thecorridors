@@ -131,7 +131,37 @@ $(".disclaimer_click").click(function () {
   $("#disclaimer-modal").modal("show");
 });
 
+// Lightweight Levenshtein distance for short email domains
+function domainDistance(a, b) {
+  a = (a || "").toLowerCase();
+  b = (b || "").toLowerCase();
+  if (a === b) return 0;
+  var m = a.length;
+  var n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  var dp = [];
+  for (var i = 0; i <= m; i++) {
+    dp[i] = [i];
+  }
+  for (var j = 1; j <= n; j++) {
+    dp[0][j] = j;
+  }
+  for (var i2 = 1; i2 <= m; i2++) {
+    for (var j2 = 1; j2 <= n; j2++) {
+      var cost = a[i2 - 1] === b[j2 - 1] ? 0 : 1;
+      dp[i2][j2] = Math.min(
+        dp[i2 - 1][j2] + 1,
+        dp[i2][j2 - 1] + 1,
+        dp[i2 - 1][j2 - 1] + cost
+      );
+    }
+  }
+  return dp[m][n];
+}
+
 function form_validate(elm) {
+  // Basic front-end validation + submit throttling (existing behaviour)
   jQuery("#" + elm + " input[type=submit], #" + elm + " button").prop(
     "disabled",
     true
@@ -142,41 +172,122 @@ function form_validate(elm) {
       false
     );
   }, 5000);
-  var name = jQuery("#" + elm + ' input[name="fname"]').val();
-  var mobileno = jQuery("#" + elm + ' input[name="mobile"]').val();
-  var emailid = jQuery("#" + elm + ' input[name="email"]').val();
-  var message = jQuery("#" + elm + ' textarea[name="message"]').val();
-  var fsource = jQuery("#" + elm + ' input[name="source"]').val();
 
-  var current_url = location.hostname;
+  var $form = jQuery("#" + elm);
+  var name = ($form.find('input[name="fname"]').val() || "").trim();
+  var mobileno = ($form.find('input[name="mobile"]').val() || "").trim();
+  var emailid = ($form.find('input[name="email"]').val() || "").trim();
+  var message = $form.find('textarea[name="message"]').val();
+  var fsource = $form.find('input[name="source"]').val();
 
-  if (name == "") {
-    //alert("Please Enter Your Name");
+  if (!name) {
     return false;
   }
 
-  mobileno = mobileno.replace(/[^0-9]/g, "");
-  if (mobileno.length != 10) {
-    //alert("Please Enter 10 Digit Mobile Number");
-    return false;
-  }
-  var atpos = emailid.indexOf("@");
-  var dotpos = emailid.lastIndexOf(".");
-  if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= emailid.length) {
+  // Normalise mobile: keep digits only (basic client-side check; server does strict checks)
+  mobileno = (mobileno || "").replace(/[^0-9]/g, "");
+  if (mobileno.length !== 10) {
     return false;
   }
 
-  if (message == undefined) {
-    message = "";
-  }
-  if (name != "" && mobileno != "") {
-    $("#pageloader").fadeIn();
-    if (fsource == "Download Brochure") {
-      document.getElementById("bro-pdf").click();
+  if (emailid) {
+    // Lowercase + basic regex email validation (client-side only; backend re-validates)
+    emailid = emailid.toLowerCase();
+    var emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+    if (!emailRegex.test(emailid)) {
+      return false;
     }
 
+    // Soft warning: common domain typo detection (gmail.com, yahoo.com, etc.)
+    var parts = emailid.split("@");
+    if (parts.length === 2) {
+      var domain = parts[1];
+      var commonDomains = [
+        "gmail.com",
+        "yahoo.com",
+        "yahoo.co.in",
+        "hotmail.com",
+        "outlook.com",
+        "live.com",
+        "msn.com",
+        "icloud.com",
+        "rediffmail.com"
+      ];
+
+      for (var i = 0; i < commonDomains.length; i++) {
+        var genuine = commonDomains[i];
+        if (domain !== genuine && domainDistance(domain, genuine) === 1) {
+          // Only prompt once per page load to avoid annoyance
+          if (!window.__EMAIL_DOMAIN_TYPO_CONFIRMED__) {
+            var msg =
+              "Your email domain is '" +
+              domain +
+              "', did you mean '" +
+              genuine +
+              "'?\n\n" +
+              "If this is a typo, click Cancel to fix it.\n" +
+              "If it is correct, click OK to submit anyway.";
+            var proceed = window.confirm(msg);
+            if (!proceed) {
+              return false; // Let user correct the email
+            }
+            window.__EMAIL_DOMAIN_TYPO_CONFIRMED__ = true;
+          }
+          break;
+        }
+      }
+    }
+  }
+
+  if (typeof message === "undefined") {
+    message = "";
+  }
+
+  if (name !== "" && mobileno !== "") {
+    $("#pageloader").fadeIn();
+    if (fsource === "Download Brochure") {
+      var broPdf = document.getElementById("bro-pdf");
+      if (broPdf) {
+        broPdf.click();
+      }
+    }
+
+    // Integrate Google reCAPTCHA v3 (Invisible)
+    if (
+      typeof grecaptcha !== "undefined" &&
+      typeof window.RECAPTCHA_SITE_KEY !== "undefined" &&
+      window.RECAPTCHA_SITE_KEY
+    ) {
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute(window.RECAPTCHA_SITE_KEY, { action: "submit" })
+          .then(function (token) {
+            // Try to find an existing hidden input for this form
+            var tokenInput =
+              $form.find('input[name="recaptcha_token"]').get(0) || null;
+
+            if (!tokenInput) {
+              tokenInput = document.createElement("input");
+              tokenInput.type = "hidden";
+              tokenInput.name = "recaptcha_token";
+              $form.get(0).appendChild(tokenInput);
+            }
+
+            tokenInput.value = token;
+
+            // Submit the form programmatically after token is set
+            $form.get(0).submit();
+          });
+      });
+
+      // Prevent default submit; we will submit after token is set
+      return false;
+    }
+
+    // Fallback: if reCAPTCHA is not configured/loaded, behave as before
     return true;
   }
+
   return false;
 }
 
