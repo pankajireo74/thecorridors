@@ -115,31 +115,36 @@ $tsField     = isset($_REQUEST['ts']) ? (int) $_REQUEST['ts'] : 0;
 $ttSubmit    = $tsField > 0 ? ($submittedAt - $tsField) : null;
 
 // -------------------------------------------------------------------------
-// reCAPTCHA v3 verification
+// reCAPTCHA v2 verification (explicit checkbox)
 // -------------------------------------------------------------------------
 
-$recaptchaToken = $_POST['recaptcha_token'] ?? '';
+// Google reCAPTCHA v2 posts the token as 'g-recaptcha-response'
+$recaptchaToken = $_POST['g-recaptcha-response'] ?? '';
 $remoteIp       = $_SERVER['REMOTE_ADDR'] ?? null;
 $userAgent      = $_SERVER['HTTP_USER_AGENT'] ?? '';
 
-// Default: in development we always accept the lead and only use the
-// anti-bot signals (honeypot, time-to-submit, reCAPTCHA) for scoring/flags.
-// No quarantine / blocking in this phase.
-$leadAccepted       = true;
-$quarantineReasons  = [];
-$captchaScore       = null;
+// For v2 we require a successful CAPTCHA for every submission.
+$leadAccepted      = true;
+$captchaScore      = null;
+$quarantineReasons = [];
 
-// Only attempt reCAPTCHA verification if configuration is present.
-$verification = verify_recaptcha_token($recaptchaToken, $remoteIp);
-if ($verification !== null) {
-    $isSuccess    = !empty($verification['success']);
-    $captchaScore = isset($verification['score']) ? (float) $verification['score'] : 0.0;
-
-    // You can adjust this threshold (0.0 - 1.0) based on traffic patterns.
-    $threshold = 0.5;
-
-
+if (empty($recaptchaToken)) {
+    echo 'Please complete the CAPTCHA challenge.';
+    echo '</br>';
+    echo "<a href='index.php'>Go Back</a>";
+    die;
 }
+
+$verification = verify_recaptcha_token($recaptchaToken, $remoteIp);
+if ($verification === null || empty($verification['success'])) {
+    echo 'CAPTCHA verification failed. Please try again.';
+    echo '</br>';
+    echo "<a href='index.php'>Go Back</a>";
+    die;
+}
+
+// For v2 there is no score; we store 1.0 to indicate a passed CAPTCHA.
+$captchaScore = 1.0;
 
 
 $isDuplicate = false;

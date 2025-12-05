@@ -252,39 +252,9 @@ function form_validate(elm) {
       }
     }
 
-    // Integrate Google reCAPTCHA v3 (Invisible)
-    if (
-      typeof grecaptcha !== "undefined" &&
-      typeof window.RECAPTCHA_SITE_KEY !== "undefined" &&
-      window.RECAPTCHA_SITE_KEY
-    ) {
-      grecaptcha.ready(function () {
-        grecaptcha
-          .execute(window.RECAPTCHA_SITE_KEY, { action: "submit" })
-          .then(function (token) {
-            // Try to find an existing hidden input for this form
-            var tokenInput =
-              $form.find('input[name="recaptcha_token"]').get(0) || null;
-
-            if (!tokenInput) {
-              tokenInput = document.createElement("input");
-              tokenInput.type = "hidden";
-              tokenInput.name = "recaptcha_token";
-              $form.get(0).appendChild(tokenInput);
-            }
-
-            tokenInput.value = token;
-
-            // Submit the form programmatically after token is set
-            $form.get(0).submit();
-          });
-      });
-
-      // Prevent default submit; we will submit after token is set
-      return false;
-    }
-
-    // Fallback: if reCAPTCHA is not configured/loaded, behave as before
+    // For reCAPTCHA v2 checkbox, no JS integration is needed here.
+    // The widget itself forces explicit user action before submit,
+    // and the backend verifies the token.
     return true;
   }
 
