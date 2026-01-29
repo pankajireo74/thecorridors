@@ -119,7 +119,66 @@
                         Now
                     </h3>
                 </div>
-                <div class="col-lg-3 col-md-12 position-relative">
+                <div class="col-lg-9 ol-md-9">
+                    <div class="owl-carousel owl-theme video-carousel carousel-nav">
+                        <div class="item video " data-aos="fade-up" data-aos-delay="60" data-aos-duration="1500"
+                            data-aos-easing="ease">
+                            <div class="video-wrapper">
+                                <iframe width="0" height="0"
+                                    src="https://www.youtube.com/embed/qNjr2-0JAiM?autoplay=1&rel=0&controls=1&showinfo=0&mute=1&loop=1&playlist=qNjr2-0JAiM"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="item video" data-aos="fade-up" data-aos-delay="60" data-aos-duration="1500"
+                            data-aos-easing="ease">
+                            <div class="video-wrapper">
+                                <iframe width="0" height="0"
+                                    src="https://www.youtube.com/embed/CVEdJntYmaI?autoplay=1&rel=0&controls=1&showinfo=0&mute=1&loop=1&playlist=CVEdJntYmaI"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="item video" data-aos="fade-up" data-aos-delay="60" data-aos-duration="1500"
+                            data-aos-easing="ease">
+                            <div class="video-wrapper">
+                                <iframe width="0" height="0"
+                                    src="https://www.youtube.com/embed/vIzHC1CcKZE?autoplay=1&rel=0&controls=1&showinfo=0&mute=1&loop=1&playlist=vIzHC1CcKZE"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="item video" data-aos="fade-up" data-aos-delay="60" data-aos-duration="1500"
+                            data-aos-easing="ease">
+                            <div class="video-wrapper">
+                                <iframe width="0" height="0"
+                                    src="https://www.youtube.com/embed/ITBim4NSQ6k?autoplay=1&rel=0&controls=1&showinfo=0&mute=1&loop=1&playlist=ITBim4NSQ6k"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="item video" data-aos="fade-up" data-aos-delay="60" data-aos-duration="1500"
+                            data-aos-easing="ease">
+                            <div class="video-wrapper">
+                                <iframe width="0" height="0"
+                                    src="https://www.youtube.com/embed/WCPRcSPThYM?autoplay=1&rel=0&controls=1&showinfo=0&mute=1&loop=1&playlist=WCPRcSPThYM"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-3 col-md-12 position-relative">
                     <img src="images/readytomovein/image1.jpg" class="w-100 " alt="">
                     <div class="imageoverlaytext2">
                         The images, renderings, etc. are for illustration only and subject to change at
@@ -148,7 +207,7 @@
                         of final
                         project. This does not constitute a legal offer – size of each email
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

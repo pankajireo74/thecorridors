@@ -160,6 +160,18 @@ p {
   width: 100%;
 }
 
+.homebanner{
+  width: 100%;
+  /* height: 100dvh; */
+}
+
+.homebanner iframe{
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+  pointer-events: none;
+}
+
 .menu1 .navbar-nav .nav-item .nav-link {
   margin: 0vw 0.8vw;
   color: #fff;
@@ -595,7 +607,7 @@ p {
 
 .allinone-images .internal-text-box {
   left: 1vw;
-  bottom: 13.531vw;
+  bottom: 10.531vw;
 }
 
 .allinone-images .internal-text-box-2 {
@@ -604,7 +616,7 @@ p {
 }
 
 .allinone-images .bnr-subtitle {
-  font-size: 2.3vw;
+  font-size: 2vw;
   font-family: "nocturnal", sans-serif !important;
 }
 
@@ -1517,6 +1529,40 @@ label.error {
 .livesmart img {
   height: 500px;
   object-fit: cover;
+}
+
+.video-carousel .owl-item.active.center .video-wrapper {
+  transition: all 1s ease;
+  transform: scale(1) !important;
+}
+
+.video-carousel .owl-item .video-wrapper {
+  transition: all 1s ease;
+  transform: scale(0.85) !important;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  /* padding-top: 177.77%; 9:16 for Shorts */
+  /* padding-top: 56.25%; 16:9 */
+  overflow: hidden;
+  height: 65dvh;
+  border-radius: 20px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .modal-content .btn-close {
@@ -2433,7 +2479,16 @@ label.error {
   }
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+
+  .homebanner iframe{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  
+}
 
 @media (max-width: 400px) {
   .custom-card-event {

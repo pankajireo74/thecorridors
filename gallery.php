@@ -25,7 +25,7 @@
                     No Waiting. Just Living.
                 </p>
             </div> -->
-            <div class="video-banner d-none d-md-block d-lg-block">
+            <!-- <div class="video-banner d-none d-md-block d-lg-block">
                 <video autoplay muted loop playsinline preload="auto">
                     <source src="images/gallery/video.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
@@ -36,7 +36,13 @@
                     <source src="images/gallery/mblvideo.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-            </div>
+            </div> -->
+            <div class="homebanner">
+            <iframe width="" height="" src="https://www.youtube.com/embed/FRWQGigr1aI?si=cVxxGp5kklZUKHms&autoplay=1&rel=0&controls=0&showinfo=1&mute=1&loop=1&playlist=FRWQGigr1aI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
             <!-- <img src="images/proimg.jpg" class="brn_img" alt="Banner Image"> -->
         </div>
     </section>

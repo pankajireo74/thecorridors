@@ -70,7 +70,7 @@ if (file_exists('inc/header.php')) {
 
 
     <section class="padd1 pt-0 position-relative">
-        <div class="std-banne image-section  allinone-images  sticky-top">
+        <!-- <div class="std-banne image-section  allinone-images  sticky-top">
             <div class="position-absolute z-2 internal-text-box ">
                 <p class="text-black bg-white bnr-subtitle px-2 ">
                     Club - Arrival Lobby
@@ -85,7 +85,7 @@ if (file_exists('inc/header.php')) {
                 of final
                 project. This does not constitute a legal offer – size of each email
             </div>
-        </div>
+        </div> -->
         <!-- <div class="std-banne image-section allinone-images  sticky-top">
             <div class="position-absolute z-2 internal-text-box left-0">
                 <p class="text-black bg-white bnr-subtitle px-2">
@@ -99,11 +99,11 @@ if (file_exists('inc/header.php')) {
         <div class="std-banne image-section allinone-images  sticky-top">
             <div class="position-absolute z-2 internal-text-box ">
                 <p class="text-black bg-white bnr-subtitle px-2 ">
-                    Club - Bar
+                    Club - Multipurpose Court
                 </p>
 
             </div>
-            <img src="images/all/Bar.jpg" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <img src="images/all/clubhouse/1.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
             <div class="imageoverlaytext2 cstcss2">
                 The images, renderings, etc. are for illustration only and subject to change at
                 sole
@@ -115,11 +115,11 @@ if (file_exists('inc/header.php')) {
         <div class="std-banne image-section allinone-images  sticky-top">
             <div class="position-absolute z-2 internal-text-box ">
                 <p class="text-black bg-white bnr-subtitle px-2 ">
-                    Club - Deli Area
+                    Club - Multipurpose Court
                 </p>
 
             </div>
-            <img src="images/all/Club-Deli-Area.jpg" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <img src="images/all/clubhouse/2.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
             <div class="imageoverlaytext2 cstcss2">
                 The images, renderings, etc. are for illustration only and subject to change at
                 sole
@@ -131,11 +131,11 @@ if (file_exists('inc/header.php')) {
         <div class="std-banne image-section allinone-images  sticky-top">
             <div class="position-absolute z-2 internal-text-box ">
                 <p class="text-black bg-white bnr-subtitle px-2 ">
-                    Club - Restaurant
+                    Club - Multipurpose Court
                 </p>
 
             </div>
-            <img src="images/all/Club-Restuarant-2.jpg" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <img src="images/all/clubhouse/3.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
             <div class="imageoverlaytext2 cstcss2">
                 The images, renderings, etc. are for illustration only and subject to change at
                 sole
@@ -147,11 +147,11 @@ if (file_exists('inc/header.php')) {
         <div class="std-banne image-section allinone-images  sticky-top">
             <div class="position-absolute z-2 internal-text-box-2 ">
                 <p class="text-black bg-white bnr-subtitle px-2 ">
-                    Club - Restaurant
+                    Club - Bar
                 </p>
 
             </div>
-            <img src="images/all/Club-Restuarant.jpg" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <img src="images/all/clubhouse/4.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
             <div class="imageoverlaytext2 cstcss2">
                 The images, renderings, etc. are for illustration only and subject to change at
                 sole
@@ -160,6 +160,151 @@ if (file_exists('inc/header.php')) {
                 project. This does not constitute a legal offer – size of each email
             </div>
         </div>
+        <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Deli Area
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/5.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div>
+        <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Deli Area
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/6.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div>
+        <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Arrival Lobby
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/7.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div>
+        <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Night Facade
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/8.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div>
+        <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Night Facade
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/9.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div>
+        <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Night Facade
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/10.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div>
+        <!-- <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Day Facade
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/11.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div> -->
+        <!-- <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Night Facade
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/12.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div> -->
+        <div class="std-banne image-section allinone-images  sticky-top">
+            <div class="position-absolute z-2 internal-text-box-2 ">
+                <p class="text-black bg-white bnr-subtitle px-2 ">
+                Club - Night Facade
+                </p>
+
+            </div>
+            <img src="images/all/clubhouse/13.webp" class="brn_img w-100 h-100 object-fit-cover" alt="Banner Image">
+            <div class="imageoverlaytext2 cstcss2">
+                The images, renderings, etc. are for illustration only and subject to change at
+                sole
+                discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc.
+                of final
+                project. This does not constitute a legal offer – size of each email
+            </div>
+        </div>
+
 
     </section>
 

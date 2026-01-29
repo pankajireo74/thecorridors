@@ -41,7 +41,7 @@
     <?php include 'inc/header.php'; ?>
 
     <section id="Home">
-        <div class="video-banner d-none d-md-block d-lg-block">
+        <!-- <div class="video-banner d-none d-md-block d-lg-block">
             <video autoplay muted loop playsinline preload="auto">
                 <source src="images/home/Hero section video 3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -52,6 +52,12 @@
                 <source src="images/home/mblvideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
+        </div> -->
+        <div class="homebanner">
+            <iframe width="" height="" src="https://www.youtube.com/embed/jLhvv6N_MKo?si=cVxxGp5kklZUKHms&autoplay=1&rel=0&controls=0&showinfo=1&mute=1&loop=1&playlist=jLhvv6N_MKo"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -82,7 +88,7 @@
     <section id="DesignPhilosophy" class="section-container">
         <div class="content-row reverse">
             <div class="image-box shadow-left-bottom position-relative" data-aos="fade-up" data-aos-duration="3000">
-                <img src="images/home/2.jpg" alt="Ready to Move In">
+                <img src="images/home/Ready_to_Move_In.webp" alt="Ready to Move In">
                 <div class="imageoverlaytext">
                     The images, renderings, etc. are for illustration only and subject to change at sole
                     discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc. of final
@@ -128,7 +134,7 @@
     <section id="Lifestyle" class="section-container">
         <div class="content-row reverse">
             <div class="image-box shadow-left-bottom position-relative" data-aos="fade-up" data-aos-duration="3000">
-                <img src="images/home/4.jpg" alt="All-in-One Clubhouse with Premium Amenities">
+                <img src="images/home/Your_Everyday_Escape.webp" alt="All-in-One Clubhouse with Premium Amenities">
                 <div class="imageoverlaytext">
                     The images, renderings, etc. are for illustration only and subject to change at sole
                     discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc. of final

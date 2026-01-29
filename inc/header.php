@@ -14,9 +14,9 @@ $scrolled = isset($_GET['scroll']) && $_GET['scroll'] > 100;
                 </div>
             </a>
             <div class="d-flex justify-center gap-3 align-items-center">
-                <div class="d-none d-md-block">
+                <!-- <div class="d-none d-md-block">
                     <p class="text-white convenience">Convenience is Everything</p>
-                </div>
+                </div> -->
                 <!-- ONE Hamburger button for all screen sizes -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">

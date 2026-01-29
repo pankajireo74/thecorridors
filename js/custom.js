@@ -39,7 +39,39 @@ jQuery(document).ready(function ($) {
       },
     },
   });
+
+  $(".video-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 25,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    smartSpeed: 2500,
+    autoplayHoverPause: true,
+    nav: false,
+    dots: false,
+    navText: ["<img src='images/left.png'>", "<img src='images/right.png'>"],
+    responsive: {
+      0: {
+        items: 1,
+        loop: true,
+        autoplay: true,
+      },
+      768: {
+        items: 2,
+        loop: true,
+        autoplay: true,
+      },
+      768: {
+        items: 3,
+        loop: true,
+        autoplay: true,
+      }
+    },
+  });
 });
+
+
 
 jQuery(document).ready(function ($) {
   // Add smooth scrolling to all links

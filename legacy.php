@@ -115,7 +115,7 @@
 
     <section id="Base">
         <div class="position-relative">
-            <img src="images/legacy/after.png" class="after" alt="After" />
+            <img src="images/legacy/1.jpg" class="after" alt="After" />
             <div class="imageoverlaytext cstcss">
                 The images, renderings, etc. are for illustration only and subject to change at sole
                 discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc. of final
@@ -123,7 +123,7 @@
             </div>
         </div>
         <div class="position-relative">
-            <img src="images/legacy/secondimg.png" class="w-100 h-100" alt="After" />
+            <img src="images/legacy/3.jpg" class="w-100 h-100" alt="After" />
             <div class="imageoverlaytext cstcss">
                 The images, renderings, etc. are for illustration only and subject to change at sole
                 discretion of Promoter. These may not depict the actual, design, amenities, finishes, etc. of final
